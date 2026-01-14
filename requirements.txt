@@ -1,0 +1,6 @@
+opencv-python
+ultralytics
+face_recognition
+playsound==1.2.2
+pyttsx3
+cmake
