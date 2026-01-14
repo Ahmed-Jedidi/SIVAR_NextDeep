@@ -37,8 +37,8 @@ SmartGuard-CCTV/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/SmartGuard-CCTV.git
-cd SmartGuard-CCTV
+git clone https://github.com/Ahmed-Jedidi/SIVAR_NextDeep.git
+cd SIVAR_NextDeep
 
 ```
 
@@ -53,6 +53,38 @@ cd SmartGuard-CCTV
 pip install opencv-python ultralytics face_recognition playsound pyttsx3
 
 ```
+
+Otherwise, You can install all required libraries using the provided `requirements.txt` file.
+
+**Create the `requirements.txt` file:**
+
+```text
+opencv-python
+ultralytics
+face_recognition
+playsound==1.2.2
+pyttsx3
+cmake
+
+```
+
+**Run the installation:**
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### ⚠️ Critical Installation Notes
+
+Please read this before installing, as the **Face Recognition** and **Audio** libraries have specific system requirements:
+
+* **Playsound Version:** The `requirements.txt` strictly specifies `playsound==1.2.2`. Do not upgrade this package. Newer versions (like 1.3.0) often fail on Windows/Python 3.x environments.
+* **Face Recognition & Dlib:** The `face_recognition` library depends on `dlib`, which is a C++ library.
+* **Windows Users:** You must have **Visual Studio** installed with the **"Desktop development with C++"** workload enabled to compile `dlib`.
+* **Linux/Mac Users:** You must have CMake installed before running pip.
+* Linux: `sudo apt-get install cmake`
+* Mac: `brew install cmake`
 
 ### 3. Setup Known Faces
 
@@ -114,3 +146,6 @@ This project is open-source and available under the MIT License.
 ## 🤝 Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+
+
+
